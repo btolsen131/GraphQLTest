@@ -13,7 +13,7 @@ builder.Services.AddDbContextPool<AppDbContext>(opt => opt.UseSqlServer("Server=
 builder.Services.AddGraphQLServer()
     .AddQueryType<Query>()
     .RegisterDbContext<AppDbContext>()
-    .;
+    .AddProjections();
 
 
 var app = builder.Build();
